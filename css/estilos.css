@@ -1,0 +1,373 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*Reset para REMS 62,5% =10 px de 16 px  */
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+
+/* GLOBAL*/
+img{
+    max-width: 100%;
+}
+.contenedor{
+    max-width: 120rem;
+   /* margin-left: auto;
+    margin-right: auto; Esto es igual a la linea de abajo */
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 3.4rem;
+}
+h3{
+    font-size: 3rem;
+}
+h4{
+    font-size: 2.6rem;
+}
+
+/** UTILIDADES **/
+.seccion{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.fw-700{
+    font-weight: 700; /*Cambia el grosor de la letra */      
+}
+.fw-300{
+    font-weight: 300;
+}
+.centrar-texto{
+    text-align: center;
+}
+
+.d-block{
+    display: block!important;
+}
+
+.contenido-centrado{
+    max-width: 80rem;
+}
+
+/** BOTONES **/
+.boton{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block; /* Los enlaces e imagenes por defecto vienen con inline y toca pasarlos a block o inline-block para poder modificarle su ancho */
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+}
+.boton:hover{
+    cursor: pointer; /* Hace que cuando se pase el clic sobre el boton aparezca la manito */
+}
+.boton-amarillo{
+    background: rgba(255, 117, 020, 0.9);
+}
+
+.boton-verde{
+    background: rgba(31, 30, 30, 0.712);
+}
+
+/** HEADER **/
+.site-header{
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
+.site-header.inicio{
+    background-image: url(../img/header.jpg); /* los dos puntos "../" sirve para selecionar contenido de otras carpetas fuera de css*/
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 60rem; /* 60rem=600px*/
+}
+.contenido-header{
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* row=default, row-reverse=de derecha a izquiera y column=de arriba hacia abajo */
+    justify-content: space-between;
+}
+
+.contenido-header h1{
+    color: white;
+    padding-bottom: 2rem; /* Padding es el espacio hacia adentro del elemento */
+    max-width: 60rem;
+    line-height: 2; /* Deja espacio entre linea */
+}
+.barra{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding-top: 3rem; /* Deja espacio sin modificar el fondo*/
+}
+
+/** NAVEGACION **/
+.navegacion a{
+    color: white;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-size: 1.8rem; /* Tamaño de letra*/
+    margin-right: 2rem; /* Espacio entre cada elemento*/
+}
+
+.navegacion a:hover{ /* "hover" sirve para cambiar el color cuando se pasa el mouse sobre él*/
+color: rgba(255, 255, 255, 0.6);
+}
+
+.navegacion a:last-of-type{ /* Seleciona el ultimo elemento */
+ margin: 0;
+}
+
+/** ICONOS NOSOTROS **/
+
+.iconos-nosotros{
+    display: flex;
+    justify-content: space-between;
+}
+
+.icono{
+    flex-basis: calc(33.3% - 1rem); 
+    text-align: center;
+}
+
+.icono h3{
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+/** ANUNCIOS **/
+.contenedor-anuncios{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.anuncio{
+    flex: 0 0 calc(33.3% - 1rem); /* El primer 0 es del flex:grow para que el contenido crezca, el segundo 0 es flex:shrink para que el contenido se haga mas pequeño si es posible y el otro es su base */
+  /*  border-style: solid;
+    border-color: #b5b5b5;
+    border-width: 1px; Es lo mismo que la linea de abajo */ 
+    border: 1px solid #b5b5b5;
+    background: #f5f5f5;
+    margin-bottom: 2rem;
+}
+
+.contenido-anuncio{
+    padding: 2rem;
+}
+
+.contenido-anuncio h3, .contenido-anuncio p{
+    margin: 0;
+}
+
+.precio{
+    color: rgba(255, 117, 020, 0.9);
+    font-weight: 700;
+}
+.iconos-caracteristica{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 50rem;
+    flex: 1; /* Para que crezca pero siempre siendo limitado por el max-width*/
+}
+.iconos-caracteristica li{
+    display: flex;
+}
+.iconos-caracteristica li img{
+    margin-right: 2rem;
+}
+.ver-todas{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/** CONTACTO HOME **/
+.imagen-contacto{
+    background-image: url(../img/encuentra.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+}
+.contenido-contacto{
+    flex: 1;
+    color: white;
+}
+.contenido-contacto p{
+    font-size: 1.8rem;
+}
+
+/** SECCION INFERIOR **/
+.seccion-inferior{
+    display: flex;
+    justify-content: space-between;
+}
+.seccion-inferior .blog{
+    flex-basis: 60%
+}
+.seccion-inferior .testimoniales{
+    flex-basis: calc(40% - 2rem);
+}
+
+.entrada-blog {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.entrada-blog :last-of-type {
+    margin-bottom: 0;
+}
+.entrada-blog .imagen{
+    flex-basis: 40%;
+}
+.entrada-blog .texto-entrada{
+    flex-basis: calc(60% - 3rem);
+    
+}
+
+.texto-entrada a{
+    color: black;
+    text-decoration: none;
+}
+.texto-entrada h4{
+    margin: 0;
+    line-height: 1.4;
+}
+
+.texto-entrada h4::after{
+    content: '';
+    display: block;
+    width: 85%;
+    height: .5rem;
+    background-color: rgba(255, 117, 020, 0.9);
+    margin-top: 1rem;
+}
+.texto-entrada span{
+    color: rgba(255, 117, 020, 0.9);
+    font-weight: 700;
+}
+
+/** TESTIMONIALES **/
+.testimonial{
+    background: rgba(31, 30, 30, 0.712);
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: white;
+    border-radius: 2rem;
+}
+
+.testimonial p{
+    text-align: right;
+}
+
+.testimonial blockquote::before{
+    content: '';
+    background-image: url(../img/comilla.svg);
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    left: -2rem;
+}
+.testimonial blockquote{
+    position: relative;  /** sirve para posicionar un elemento en cualquier parte, al padre se le debe dar la position:absulte y al hijo position:relative **/
+    padding-left: 5rem;
+    font-weight: 300;
+}
+
+/** FOOTER **/
+.site-footer{
+    background: #333333;
+    color: white;
+    margin-bottom: 0;
+}
+.contenedor-footer {
+    display: flex;   
+    justify-content: space-between;
+    align-items: center;
+   
+    
+}
+
+/** INTERNAS **/
+/* Nosotros*/
+.contenido-nosotros{
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); /* Divide la pantalle en columnas fr=fracción */ 
+    grid-column-gap: 4rem; /* Separación entre cada columna */
+}
+.texto-nosotros blockquote{
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0 3rem 0;
+}
+
+/*Anuncios*/
+.resumen-propiedad{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/** Contacto**/
+.contacto p{
+    font-size: 1.4rem;
+    color: #4f4f4f;
+    margin: 2rem 0 0 0;
+}
+legend{
+    font-size: 2rem;
+    color: #4f4f4f;
+}
+label{
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+input:not([type="submit"]),
+textarea,
+select{ /*Selecciona todos los input menos el submit*/
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+input[type="radio"]{
+    width: auto;
+    margin: 0;
+    }
+select{
+    -webkit-appearance: none; /*Prefijo de google crome para que el select lea el padding */
+    appearance: none;
+}
+textarea{
+    height: 20rem;
+}
+.forma-contacto{
+    max-width: 40rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

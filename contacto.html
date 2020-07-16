@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+ <header class="site-header ">
+
+    <div class="contenedor contenido-header">
+        <div class="barra">
+                <a href="/">
+                <img src="img/logo.svg" alt="Logo tipo de bienes raices"> <!-- el atributo "alt" muestra mensaje si no carga la imagen-->
+                </a>
+            <nav class="navegacion">
+                <a href="nosotros.html">Nosotros</a> <!-- La etiqueta "a" se usa para crear enlaces-->
+                <!--<a href="http://netflix.com">Ir a Netflix</a>  agregar http:// para redirigir a páginar externas-->
+                <a target="_blank" href="anuncios.html">Anuncios</a> <!-- target="_blank" sirve para redirigir a una nueva pestaña-->
+                <a href="blog.html">Blog</a> 
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </div>
+  </header>
+
+  <h1 class="fw-700 centrar-texto">Contacto</h1>
+  <img src="img/destacada3.jpg" alt="Imagen principal">
+
+  <main class="contenedor seccion contenido-centrado">
+      <h2 class="fw-300 centrar-texto">Llena el formulario de contacto</h2>
+
+      <form class="contacto" action="">
+            <fieldset>
+                <legend>Información Personal</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Tu Nombre">
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" placeholder="Tu Correo Electrónico"  required>
+
+                <Label for="telefono">Teléfono:</Label>
+                <input type="tel"  id="telefono" placeholder="Tu Teléfono" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" ></textarea>
+
+            </fieldset>   
+
+            <fieldset>
+                <legend>Información Sobre Propiedad</legend>
+                 
+                <label for="opciones">Vende o Compra:</label>
+                <select  id="opciones">
+                    <option value="" disabled selected>-- Seleccione --</option> <!--disable=desabilita la opcion y selected la pone como primera opción siempre-->
+                    <option value="Compra">Compra</option>
+                    <option value="Vende">Vende</option>
+                </select>
+
+                <label for="cantidad">Presupuesto:</label>
+                <input type="number"  id="cantidad" min="0" max="10" step="5">
+            </fieldset>
+
+            <fieldset>
+                <legend>Contacto</legend>
+                <p>Cómo desea ser contactado:</p>
+
+                <label for="telefono">Teléfono</label>
+                <input type="radio" name="contacto" value="telefono" id="telefono"> <!-- El name sirve para unir dos sentencias y tambíen para llamar en el back end-->
+
+                <label for="correo">E-mail</label>
+                <input type="radio" name="contacto" value="correo" id="correo"> <!-- El value solo se usa en type radio y option  -->
+
+                <p>Si eligió teléfono, elija la fecha y la hora</p>
+                <label for="fecha">Fecha:</label>
+                <input type="date"  id="fecha">
+
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora"  min="09:00" max="18:00">
+
+            </fieldset>
+
+            <input type="submit" value="Enviar" class="boton boton-amarillo">
+        
+      </form> <!-- Form es para crear un formulario y todo debe ir dentro de él-->
+  </main>
+
+<footer class="site-footer seccion">
+    <div class="contenedor contenedor-footer">
+        <nav class="navegacion ">
+            <a href="nosotros.html">Nosotros</a>
+            <a href="anuncios.html">Anuncios</a> 
+            <a href="blog.html">Blog</a> 
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        <p>Todos los derechos reservados 2019 &copy;</p> 
+    </div>
+</footer>
+</body>
+</html>
